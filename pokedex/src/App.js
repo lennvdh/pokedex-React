@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
+import FetchingData from "./components/FetchingData";
 
 function App() {
 
   return (
     <div className="App">
-
+      <FetchingData/>
     </div>
   );
 }
