@@ -1,0 +1,50 @@
+.pokemonbg1, .pokemonbg2{
+    position: absolute;
+    z-index: -5;
+    height: 100%;
+    width: 100%;
+}
+
+
+.pokemonbg1{
+    animation-name: pokemonbg1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+.pokemonbg2{
+    animation-name: pokemonbg2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+@keyframes pokemonbg1 {
+    0%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes pokemonbg2 {
+    0%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}

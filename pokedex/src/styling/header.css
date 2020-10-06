@@ -1,0 +1,64 @@
+.header{
+    position: fixed;
+}
+
+.pokemon1, .pokemon2{
+    height: 225px;
+    width: 100%;
+    position: fixed;
+    object-fit: cover;
+}
+.pokemon1{
+    animation-name: pokemon2;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+.pokemon2{
+    animation-name: pokemon1;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+@keyframes pokemon1 {
+    0%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes pokemon2 {
+    0%{
+        opacity: 0;
+    }
+    45%{
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.container{
+    background-color: white;
+    position: relative;
+    margin-left: 700px;
+    margin-top: 80px;
+    background: rgba(255,255,255,0.7);
+}
+.title{
+    text-align: center;
+    margin-top: 50px;
+}
