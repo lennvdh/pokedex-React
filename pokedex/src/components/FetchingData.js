@@ -39,13 +39,13 @@ export default function FetchingData(props) {
                     onChange={event => setPokename(event.target.value)}
                     placeholder="pokemon name"
                 />
-                <div className="drop-down">
+                {/*<div className="drop-down">
                     <select>
                         {
                             pokemons.map((pokemon => <option value={pokemon.name}>{pokemon.name}</option> ))
                         }
                     </select>
-                </div>
+                </div>*/}
                 <h1>{pokemons.name}</h1>
                 {/*{pokemons.map((pokemon => <li key={pokemon.data.results.id}>{pokemon.data.results.name}</li>))}*/}
                 {/*{pokemons.forEach(pokemon => <li key={pokemon.data.results.id}>{pokemon.data.results.name}</li> )}*/}

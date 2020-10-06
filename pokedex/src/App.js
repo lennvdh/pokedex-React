@@ -1,11 +1,12 @@
 import React from 'react';
 import FetchingData from "./components/FetchingData";
+import Header from "./components/Header";
 
 function App() {
 
   return (
     <div className="App">
-      <FetchingData/>
+      <Header/>
     </div>
   );
 }
