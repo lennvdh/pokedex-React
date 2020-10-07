@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export default function FetchingData(props) {
     // hooks
-    const [pokemons, setPokemons] = useState([]);
+    const [pokemons, setPokemons] = useState([pokename]);
     const [pokename, setPokename] = useState('');
 
     useEffect(()=>{
@@ -13,7 +13,7 @@ export default function FetchingData(props) {
             .then(res => {
                 //console.log(res.data.name)
                 setPokemons(res.data)
-                //props.onSubmit(res.data);
+                props.onSubmit(res.data);
                 setPokename('');
             })
 

@@ -11,8 +11,8 @@ export default function Header() {
 
     return(
         <div className="header">
-            <img className="pokemon1" src={pokemon1} alt="pokemon"/>
-            <img className="pokemon2" src={pokemon4} alt="pokemon"/>
+            <img className="pokemon1" src={pokemon4} alt="pokemon"/>
+            <img className="pokemon2" src={pokemon1} alt="pokemon"/>
             <div className="container">
                 <h1 className="title">Pokémon</h1>
             </div>

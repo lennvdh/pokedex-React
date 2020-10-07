@@ -2,7 +2,7 @@ import React from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Background from "./components/Background";
-import TextBackground from "./components/TextBackground";
+import PokemonInfo from "./components/PokemonInfo";
 
 function App() {
 
@@ -10,9 +10,7 @@ function App() {
     <div className="App">
       <Header/>
       <Background/>
-
-
-
+      <PokemonInfo/>
       <Footer/>
     </div>
   );
