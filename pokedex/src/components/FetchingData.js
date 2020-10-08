@@ -16,7 +16,6 @@ export default function FetchingData(props) {
                 props.onSubmit(res.data);
                 setPokename('');
             })
-
             .catch(err=>{
                 console.log(err)
             })

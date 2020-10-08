@@ -1,3 +1,5 @@
+
+
 .pokemonInfo{
     padding: 20px;
     height: 100%;
@@ -15,6 +17,13 @@
     font-size: 20px;
 }
 .pokemonInfo h1{
-    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Arial Black";
     z-index: 1;
+}
+
+.pokemonInfo table{
+    text-align: center;
 }

@@ -3,6 +3,8 @@
     z-index: -5;
     height: 100%;
     width: 100%;
+    margin-top: 200px;
+    object-fit: cover;
 }
 
 
@@ -24,10 +26,22 @@
     0%{
         opacity: 1;
     }
-    45%{
+    25%{
         opacity: 1;
     }
+    45%{
+        opacity: 0.80;
+    }
     55%{
+        opacity: 0.70;
+    }
+    60%{
+        opacity: 0.6;
+    }
+    70%{
+        opacity: 0.5;
+    }
+    80%{
         opacity: 0;
     }
     100%{
