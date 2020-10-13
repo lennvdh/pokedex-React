@@ -4,6 +4,7 @@ import "../styling/pokemoninfo.css";
 import "../styling/tableinfo.css";
 
 
+
 export default function PokemonInfo(props) {
     const [pokename, setPokename] = useState('');
     const [pokemons, setPokemons] = useState([]);
@@ -13,7 +14,7 @@ export default function PokemonInfo(props) {
         let url = `https://pokeapi.co/api/v2/pokemon/${pokename}`;
         axios.get(url)
             .then(res => {
-                console.log(res.data.sprites);
+                console.log(res.data);
                 setPokemons(res.data)
                 props.onSubmit(res.data)
                 setPokename("")
@@ -23,11 +24,11 @@ export default function PokemonInfo(props) {
             })
     }, [pokename])
 
-    useEffect((props)=>{
+    useEffect(()=>{
         let url = `https://pokeapi.co/api/v2/pokemon/${pokeId}`
         axios.get(url)
             .then(resp => {
-                console.log(resp.data.sprites);
+                console.log(resp.data);
                 setPokemons(resp.data);
                 props.onSubmit(resp.data);
                 setPokeId(0);
@@ -35,17 +36,10 @@ export default function PokemonInfo(props) {
             .catch(err=>{
                 console.log(err)
             })
-    }, [pokeId])
+    }, [''])
 
-    const pokemonImage = ({pokemons}) => {
-        if (pokemons.data.sprites == undefined){
-            return(
-                <div>
-                    loading...
-                </div>
-            )
-        }
-    }
+
+
 
 
 
@@ -53,19 +47,9 @@ export default function PokemonInfo(props) {
 
     return<div className="pokemonInfo">
         <input value={pokename.name}
-               onChange={event => setPokename(event.target.value)}
+               onChange={event => setPokename(event.target.value.toLocaleLowerCase())}
                placeholder="pokemon name or ID"
         />
-        <div>
-            <img src={pokemons.data.sprites["front_default"]} alt="pokemon"/>
-        </div>
-        {/*<div className="drop-down">
-            <select>
-                {
-                    pokemons.map(pokemon => (<option value={pokemon.id}>{pokemon.name}</option>))
-                }
-            </select>
-        </div>*/}
         <div>
             <h1>{pokemons.name}</h1>
             <table className="tableInfo">
@@ -89,6 +73,6 @@ export default function PokemonInfo(props) {
 
 
 
-                {/*<tr><h2>{pokemons.map(pokemon => pokemon.stats)}</h2></tr>*/}
+
     </div>
 }
