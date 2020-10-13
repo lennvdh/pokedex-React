@@ -26,22 +26,10 @@
     0%{
         opacity: 1;
     }
-    25%{
+    45%{
         opacity: 1;
     }
-    45%{
-        opacity: 0.80;
-    }
     55%{
-        opacity: 0.70;
-    }
-    60%{
-        opacity: 0.6;
-    }
-    70%{
-        opacity: 0.5;
-    }
-    80%{
         opacity: 0;
     }
     100%{

@@ -4,10 +4,12 @@ import axios from 'axios';
 
 export default function FetchingData(props) {
     // hooks
-    const [pokemons, setPokemons] = useState([pokename]);
+    const [pokemons, setPokemons] = useState([]);
     const [pokename, setPokename] = useState('');
 
-    useEffect(()=>{
+
+
+    /*useEffect(()=>{
         let url = `https://pokeapi.co/api/v2/pokemon/${pokename}`;
         axios.get(url)
             .then(res => {
@@ -20,7 +22,7 @@ export default function FetchingData(props) {
                 console.log(err)
             })
     })
-    /*useEffect(()=>{
+    useEffect(()=>{
         let urlID = `https://pokeapi.co/api/v2/pokemon/${pokeID}`
         axios.get(urlID)
             .then(resp =>{
@@ -30,6 +32,11 @@ export default function FetchingData(props) {
             })
             .catch(err => console.log(err))
     })*/
+    useEffect(async () => {
+        let url = `https://pokeapi.co/api/v2/pokemon/ditto`
+        const res = await axios.get(url);
+        console.log(res.data)
+    })
 
     return(
         <div>

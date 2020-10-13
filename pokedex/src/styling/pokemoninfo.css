@@ -9,12 +9,12 @@
 }
 .pokemonInfo input{
     margin-top: 230px;
-    margin-left: 500px;
     width: 500px;
     background-color: black;
     color: white;
     height: 30px;
     font-size: 20px;
+    margin-left: 550px;
 }
 .pokemonInfo h1{
     text-align: center;

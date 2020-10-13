@@ -1,0 +1,10 @@
+.pokemonSearchId input{
+    margin-top: -40px;
+    float: right;
+    margin-left: 500px;
+    width: 500px;
+    background-color: black;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+}
